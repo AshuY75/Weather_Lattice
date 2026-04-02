@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #818cf8;
+  --color-secondary: #94a3b8;
+  --color-accent: #22d3ee;
+  --color-background: #020617;
+  --color-card: rgba(15, 23, 42, 0.6);
+  --color-card-border: rgba(148, 163, 184, 0.1);
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(129, 140, 248, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(34, 211, 238, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+#root {
+  width: 100%;
+}
+
+.glass {
+  background: var(--color-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-card-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-hover {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-hover:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(129, 140, 248, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(129, 140, 248, 0.2);
+}
+
+.chart-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(129, 140, 248, 0.2) transparent;
+}
