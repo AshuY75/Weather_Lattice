@@ -58,7 +58,3 @@ A production-grade ReactJS Weather Dashboard built with performance, clean archi
 - **Component Memoization**: Use of `useMemo` for heavy chart data transformations.
 - **Mobile-First CSS**: Minimal CSS footprint using Tailwind v4.
 - **Skeleton Screens**: Immediate visual feedback during data fetching.
-
----
-
-Built with ❤️ by SkyCast Team
